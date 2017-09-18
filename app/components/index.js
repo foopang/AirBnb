@@ -1,7 +1,6 @@
-'use strict';
-
 import React, { Component } from 'react';
-import { View, Navigator } from 'react-native';
+import { View } from 'react-native';
+import { Navigator } from 'react-native-deprecated-custom-components';
 import {bindActionCreators} from 'redux';
 import * as actions from '../actions/actions';
 import { connect } from 'react-redux';
@@ -56,7 +55,7 @@ class Root extends Component {
     if (routeId === 'home') {
       return (
         <Home
-        {...this.props} 
+        {...this.props}
         userData ={route.userData}
         close = {() => this.closeControlPanel()}
         navigator={navigator} />
@@ -65,7 +64,7 @@ class Root extends Component {
       if (routeId === 'invite') {
       return (
         <Invite
-        {...this.props} 
+        {...this.props}
         data ={route.data}
         close = {() => this.closeControlPanel()}
         navigator={navigator} />
@@ -101,7 +100,7 @@ class Root extends Component {
     if (routeId === 'wish') {
       return (
         <Wish
-        {...this.props} 
+        {...this.props}
         data ={route.data}
         close = {() => this.closeControlPanel()}
         navigator={navigator} />
@@ -110,21 +109,21 @@ class Root extends Component {
 
     if (routeId === 'settings') {
       return (
-        <Settings {...this.props} 
+        <Settings {...this.props}
         close = {() => this.closeControlPanel()}
         navigator={navigator} />
         );
     }
     if (routeId === 'trips') {
       return (
-        <Trips {...this.props} 
+        <Trips {...this.props}
         close = {() => this.closeControlPanel()}
         navigator={navigator} />
         );
     }
     if (routeId === 'search') {
       return (
-        <Search {...this.props} 
+        <Search {...this.props}
         close = {() => this.closeControlPanel()}
         navigator={navigator} />
         );
